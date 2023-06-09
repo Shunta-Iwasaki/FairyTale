@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fairy Tale</title>
+        <meta name='description' content="Fairy Taleの公式ブログ。">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="https://shunta-iwasaki.github.io/FairyTale/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Fairy Tale" />
+        <meta property="og:description" content="Fairy Taleの公式ブログ。" />
+        <meta property="og:site_name" content="Fairy Tale" />
+        <meta property="og:image" content="https://shunta-iwasaki.github.io/fairytale/img/header.jpg" />
+        <link rel="icon" type="image/png" href="https://shunta-iwasaki.github.io/portfolio/img/logo_ita.png">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="page-header">
+            <!-- ヘッダー写真 -->
+            <img class="page-header__img" src="img/header.jpg" alt="ヘッダー写真">
+            <!-- 記事投稿 -->
+            <div class="page-header__edit">
+                <img src="img/icon_write.svg" alt="投稿"><p>記事投稿</p>
+            </div>
+            <!-- 横線 -->
+            <hr class="x-line__edit wrapper">
+        </header>
+        <!-- コンテンツ部分 -->
+        <div class="background">
+            <div class="wrapper edit-content">
+                <div class="edit-content__title">
+                    <input type="text" value="" placeholder="タイトル" name="title">
+                </div>
+                <div class="edit-content__topic">
+                    <input type="text" value="" placeholder="本文" name="topic">
+                </div>
+                <button class="edit-content__image">
+                    <img src="img/icon_camera.svg" alt="カメラ">
+                    <p>画像を挿入</p>
+                </button>
+                <div class="edit-content__selectimg">
+                    <img  class="hide" id="edit-content__selectimg__img1" src="" alt="none">
+                    <img  class="hide" id="edit-content__selectimg__img2" src="" alt="none">
+                    <img  class="hide" id="edit-content__selectimg__img3" src="" alt="none">
+                    <img  class="hide" id="edit-content__selectimg__img4" src="" alt="none">
+                    <img  class="hide" id="edit-content__selectimg__img5" src="" alt="none">
+                </div>
+                <div class="edit-content__tag">
+                    <input type="text" value="" placeholder="タグ" name="tag">
+                </div>
+                <div class="edit-content__save">
+                    <button class="edit-content__save__pre">
+                        <p>下書き保存</p>
+                    </button>
+                    <button class="edit-content__save__post">
+                        <p>投稿する</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- フッター -->
+        <footer class="footer">
+            <!-- コピーライト -->
+            <div class="footer__copy">
+                <p>©️ Fairy Tale</p>
+            </div>
+        </footer>
+        <!-- ページトップ遷移ボタン -->
+        <button class="page-top arrow"></butotn>
+        <script src="js/script_edit.js"></script>
+    </body>
+</html>

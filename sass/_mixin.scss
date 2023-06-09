@@ -1,0 +1,14 @@
+// ブレイクポイントを指定
+$pc: 1280px;
+$sp: 639px;
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (min-width: 0px) and (max-width: ($pc)) {
+      @content;
+    }
+}
