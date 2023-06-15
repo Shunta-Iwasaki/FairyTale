@@ -33,10 +33,12 @@
         <div class="background">
             <div class="wrapper edit-content">
                 <div class="edit-content__title">
-                    <input type="text" value="" placeholder="タイトル" name="title">
+                    <input id="title" type="text" value="" placeholder="タイトル" name="title" size="37">
                 </div>
                 <div class="edit-content__topic">
-                    <input type="text" value="" placeholder="本文" name="topic">
+                    <!-- <input id="topic" type="text" size="110" value="" placeholder="本文" name="topic"> -->
+                    <textarea id="topic" placeholder="本文" name="topic" wrap="hard" rows="12" cols="110">
+                    </textarea>
                 </div>
                 <button class="edit-content__image">
                     <img src="img/icon_camera.svg" alt="カメラ">
@@ -50,7 +52,7 @@
                     <img  class="hide" id="edit-content__selectimg__img5" src="" alt="none">
                 </div>
                 <div class="edit-content__tag">
-                    <input type="text" value="" placeholder="タグ" name="tag">
+                    <input id="tag" type="text" value="" placeholder="タグ" name="tag" size="37">
                 </div>
                 <div class="edit-content__save">
                     <button class="edit-content__save__pre">

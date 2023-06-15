@@ -12,6 +12,7 @@ body {
         width: 94%;
     }
 }
+/* 灰色文字 */
 .gray-text {
     font-size: 20px;
     color: #5a5a5a;
@@ -21,9 +22,27 @@ body {
         margin-bottom: 5px;
     }
 }
+/* 縦並び */
 .block {
     display: block;
     text-align: left;
+}
+/* チェックボックス */
+input[type=checkbox] {
+    transform: scale(2);
+    margin: 0 6px 0 0;
+    @include sp {
+        transform: scale(1);
+    }
+}
+/* テーブル */
+tbody {
+    &:nth-child(even) {
+        background-color: #ffffff;
+    }
+    &:nth-child(odd) {
+        background-color: #DEDEDE;
+    }
 }
 /* ヘッダー部分 */
 .page-header {
@@ -98,7 +117,7 @@ body {
             }
         }
     }
-    &__edit {
+    &__edit, &__rogin, &__password, &__list {
         display: flex;
         justify-content: center;
         margin: 30px 0;
@@ -141,7 +160,7 @@ body {
         margin: 40px 0;
         border-top: 2px solid #6A5849;
     }
-    &__edit {
+    &__edit, &__rogin, &__password, &__list {
         margin: 30px auto 50px auto;
         border-top: 2px solid #6A5849;
         @include sp {
@@ -315,6 +334,9 @@ body {
             &__content {
                 display: flex;
                 height: auto;
+                @include sp {
+                    display: block;
+                }
                 &__img {
                     @include sp {
                         width: 52%;
@@ -333,9 +355,9 @@ body {
                     height: auto;
                     font-size: 20px;
                     @include sp {
-                        font-size: 10px;
-                        margin-left: 15px;
-                        width: 50%;
+                        font-size: 12px;
+                        margin-left: 0;
+                        width: 100%;
                     }
                     &__topic {
                         text-decoration: none;
@@ -345,6 +367,7 @@ body {
                             color: #000000;
                         }
                         @include sp {
+                            margin-top: 10px;
                         }
                         p {
                             display: -webkit-box;
@@ -362,7 +385,7 @@ body {
                         color: #5A5A5A;
                         @include sp {
                             font-size: 12px;
-                            // height: 50%;
+                            margin-top: 10px;
                         }
                         &__good {
                             display: flex;
@@ -547,6 +570,353 @@ body {
     }
 }
 
+/* ログイン */
+.rogin-content {
+    padding: 56px 0 150px 0;
+    min-width: 493px;
+    max-width: 493px;
+    @include sp {
+        padding: 30px 0 40px 0;
+        max-width: 300px;
+        min-width: 300px;
+    }
+    &__username,&__password{
+        background-color: #ffffff;
+        border: 1px solid #707070;
+        margin-bottom: 15px;
+        text-align: left;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        @include sp {
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    &__username {
+        padding: 15px 0 15px 10px;
+        max-width: 439px;
+        max-height: 60px;
+        @include sp {
+            height: 35px;
+            padding: 10px 0 10px 10px;
+            max-width: 300px;
+            max-height: 35px;
+        }
+    }
+    &__username-save {
+        display: flex;
+        position: relative;
+        margin: 0 0 30px 30px;
+        padding-left: 5px;
+        @include sp {
+            margin: 0 0 10px 0;
+            padding-left: 0;
+        }
+        &__text {
+            position: absolute;
+            font-size: 20px;
+            color: #5A5A5A;
+            left: 35px;
+            top: -3px;
+            @include sp {
+                font-size: 10px;
+                padding-left: 20px;
+                top: 3px;
+            }
+        }
+    }
+    &__password {
+        padding: 15px 0 15px 10px;
+        max-width: 439px;
+        max-height: 60px;
+        @include sp {
+            height: 35px;
+            padding: 10px 0 10px 10px;
+            max-width: 300px;
+            max-height: 35px;
+        }
+    }
+    &__password-save {
+        display: flex;
+        position: relative;
+        margin: 0 0 30px 30px;
+        padding-left: 5px;
+        @include sp {
+            margin: 0;
+            padding-left: 0;
+        }
+        &__text {
+            position: absolute;
+            font-size: 20px;
+            color: #5A5A5A;
+            left: 35px;
+            top: -3px;
+            @include sp {
+                font-size: 10px;
+                padding-left: 20px;
+                top: 3px;
+            }
+        }
+    }
+    &__page-button {
+        background-color: #5a5a5a;
+        height: 74px;
+        width: 222px;
+        border-radius: 25px;
+        font-size: 24px;
+        display: block;
+        margin: 50px auto 0 auto;
+        border: 1px solid #ffffff;
+        @include sp {
+            height: 50px;
+            width: 140px;
+            font-size: 16px;
+            margin: 35px auto 0 auto;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+    &__password-forget {
+        margin: 20px 0 0 0;
+        text-align: left;
+        padding-left: 25px;
+        @include sp {
+            padding-left: 0;
+            margin: 10px 0 40px 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        p {
+            font-size: 20px;
+            color: #5A5A5A;
+            transition: color 300ms;
+            @include sp {
+                font-size: 10px;
+            }
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+}
+
+/* パスワード再設定 */
+.password-content {
+    padding: 56px 0 160px 0;
+    min-width: 547px;
+    max-width: 547px;
+    position: relative;
+    @include sp {
+        padding: 30px 0 40px 0;
+        max-width: 300px;
+        min-width: 300px;
+    }
+    &__explane {
+        background-color: #ffffff;
+        width: 547px;
+        height: 108px;
+        border-radius: 10px;
+        font-size: 20px;
+        p {
+            padding: 10px 0 0 10px;
+            text-align: left;
+        }
+        @include sp {
+            width: 277px;
+            height: 65px;
+            font-size: 10px;
+            margin: 0 auto;
+        }
+    }
+    &__email {
+        margin-top: 30px;
+        @include sp {
+            margin-top: 20px;
+        }
+        &__email {
+            background-color: #ffffff;
+            border: 1px solid #707070;
+            margin: 0 auto ;
+            text-align: left;
+            font-size: 20px;
+            padding: 15px 0 15px 10px;
+            max-width: 493px;
+            max-height: 60px;
+            @include sp {
+                font-size: 10px;
+                height: 35px;
+                padding: 10px 0 10px 10px;
+                max-width: 300px;
+                max-height: 35px;
+            }
+        }
+        &__worning {
+            margin: 5px 0 40px 0;
+            text-align: left;
+            padding-left: 37px;
+            @include sp {
+                padding-left: 10px;
+                margin: 5px 0 40px 0;
+            }
+            a {
+                text-decoration: none;
+            }
+            p {
+                font-size: 16px;
+                color: #5A5A5A;
+                @include sp {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    &__page-button {
+        background-color: #5a5a5a;
+        color: #ffffff;
+        height: 74px;
+        width: 222px;
+        border-radius: 25px;
+        font-size: 24px;
+        display: block;
+        margin: 50px auto 0 auto;
+        border: 1px solid #ffffff;
+        @include sp {
+            height: 50px;
+            width: 140px;
+            font-size: 16px;
+            margin: 40px auto 0 auto;
+        }
+    }
+}
+
+/* 記事一覧 */
+.list-content {
+    padding: 56px 0 160px 0;
+    max-width: 1260px;
+    position: relative;
+    a {
+        text-decoration: none;
+        color: #000000;
+        transition: color 300ms;
+        &:hover {
+            color: #5a5a5a;
+        }
+    }
+    @include sp {
+        padding: 20px 0 40px 0;
+        max-width: 580px;
+    }
+    &__list {
+        text-align: left;
+        table {
+            border-collapse:collapse;		/*セル同士の間に隙間を空けない*/
+            margin: 0 auto;
+        }
+        /* ヘッダ */
+        th {
+            font-size: 25px;
+            text-align: left;
+            font-weight: lighter;
+            color: #ffffff;
+            @include sp {
+                font-size: 13px;
+            }
+            &:nth-child(2) {
+                width: 180px;
+                padding-left: 10px;
+            }
+            &:nth-child(3) {
+                width: 180px;
+            }
+            &:nth-child(4) {
+                width: 130px;
+            }
+            &:nth-child(5) {
+                width: 156px;
+            }
+            &:nth-child(6) {
+                width: 556px;
+            }
+        }
+        /* 中身 */
+        td {
+            vertical-align: top;
+            font-size: 20px;
+            padding: 10px 10px 10px 0;
+            @include sp {
+                font-size: 10px;
+            }
+            p {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                overflow: hidden;
+                @include sp {
+                    -webkit-line-clamp: 6;
+                }
+            }
+            &:nth-child(1) {
+                height: 150px;
+                padding-right: 20px;
+                background-color: #BAC9BC;
+                @include sp {
+                    padding-right: 15px;
+                    height: 100px;
+                }
+            }
+            &:nth-child(2) {
+                padding-left: 10px;
+            }
+        }
+        &__list-button {
+            margin: 20px auto 0 auto;
+            text-align: right;
+            @include sp {
+                margin: 20px auto 0 auto;
+            }
+            a {
+                text-decoration: none;
+            }
+            &__write-button, &__delete-button {
+                color: #ffffff;
+                background-color: #5A5A5A;
+                height: 55px;
+                width: 180px;
+                border-radius: 25px;
+                border: 1px solid #ffffff;
+                font-size: 20px;
+                margin-right: 10px;
+                img {
+                    height: 30px;
+                    margin: auto 0;
+                    vertical-align:middle;
+                    @include sp {
+                        height: 15px;
+                    }
+                }
+                p {
+                    margin: auto 0;
+                    display: inline-block;
+                }
+                @include sp {
+                    height: 40px;
+                    width: 110px;
+                    font-size: 12px;
+                    margin: 0 5px 0 5px;
+                }
+            }
+        }
+    }
+}
+/* 削除時 */
+.none {
+    display: none;
+}
+
 /* 記事投稿 */
 .edit-content {
     padding-top: 56px;
@@ -580,6 +950,9 @@ body {
         @include sp {
             height: 200px;
             padding: 10px 0 10px 10px;
+        }
+        textarea {
+            width: 98%;
         }
     }
     &__image {
@@ -657,6 +1030,7 @@ body {
                 height: 50px;
                 width: 140px;
                 font-size: 16px;
+                margin: 0 5px;
             }
         }
     }
@@ -664,6 +1038,7 @@ body {
 .background {
     width: 100%;
     background-color: #BAC9BC;
+    text-align: center;
 }
 .show {
     display: grid;

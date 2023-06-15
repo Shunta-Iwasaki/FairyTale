@@ -15,6 +15,7 @@ body {
   }
 }
 
+/* 灰色文字 */
 .gray-text {
   font-size: 20px;
   color: #5a5a5a;
@@ -27,9 +28,29 @@ body {
   }
 }
 
+/* 縦並び */
 .block {
   display: block;
   text-align: left;
+}
+
+/* チェックボックス */
+input[type=checkbox] {
+  transform: scale(2);
+  margin: 0 6px 0 0;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  input[type=checkbox] {
+    transform: scale(1);
+  }
+}
+
+/* テーブル */
+tbody:nth-child(even) {
+  background-color: #ffffff;
+}
+tbody:nth-child(odd) {
+  background-color: #DEDEDE;
 }
 
 /* ヘッダー部分 */
@@ -116,30 +137,30 @@ body {
     font-size: 10px;
   }
 }
-.page-header__edit {
+.page-header__edit, .page-header__rogin, .page-header__password, .page-header__list {
   display: flex;
   justify-content: center;
   margin: 30px 0;
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
-  .page-header__edit {
+  .page-header__edit, .page-header__rogin, .page-header__password, .page-header__list {
     margin: 15px 0 10px 0;
   }
 }
-.page-header__edit img {
+.page-header__edit img, .page-header__rogin img, .page-header__password img, .page-header__list img {
   width: 50px;
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
-  .page-header__edit img {
+  .page-header__edit img, .page-header__rogin img, .page-header__password img, .page-header__list img {
     width: 25px;
   }
 }
-.page-header__edit p {
+.page-header__edit p, .page-header__rogin p, .page-header__password p, .page-header__list p {
   font-size: 30px;
   margin: 7px;
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
-  .page-header__edit p {
+  .page-header__edit p, .page-header__rogin p, .page-header__password p, .page-header__list p {
     font-size: 16px;
   }
 }
@@ -170,12 +191,12 @@ body {
   margin: 40px 0;
   border-top: 2px solid #6A5849;
 }
-.x-line__edit {
+.x-line__edit, .x-line__rogin, .x-line__password, .x-line__list {
   margin: 30px auto 50px auto;
   border-top: 2px solid #6A5849;
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
-  .x-line__edit {
+  .x-line__edit, .x-line__rogin, .x-line__password, .x-line__list {
     margin: 0 auto 30px auto;
   }
 }
@@ -363,6 +384,11 @@ body {
   height: auto;
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
+  .main-content__article__list-topic__content {
+    display: block;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__list-topic__content__img {
     width: 52%;
   }
@@ -382,9 +408,9 @@ body {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__list-topic__content__text {
-    font-size: 10px;
-    margin-left: 15px;
-    width: 50%;
+    font-size: 12px;
+    margin-left: 0;
+    width: 100%;
   }
 }
 .main-content__article__list-topic__content__text__topic {
@@ -394,6 +420,11 @@ body {
 }
 .main-content__article__list-topic__content__text__topic:hover {
   color: #000000;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .main-content__article__list-topic__content__text__topic {
+    margin-top: 10px;
+  }
 }
 .main-content__article__list-topic__content__text__topic p {
   display: -webkit-box;
@@ -414,6 +445,7 @@ body {
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__list-topic__content__text__status {
     font-size: 12px;
+    margin-top: 10px;
   }
 }
 .main-content__article__list-topic__content__text__status__good {
@@ -618,6 +650,406 @@ body {
   color: #000000;
 }
 
+/* ログイン */
+.rogin-content {
+  padding: 56px 0 150px 0;
+  min-width: 493px;
+  max-width: 493px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content {
+    padding: 30px 0 40px 0;
+    max-width: 300px;
+    min-width: 300px;
+  }
+}
+.rogin-content__username, .rogin-content__password {
+  background-color: #ffffff;
+  border: 1px solid #707070;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__username, .rogin-content__password {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}
+.rogin-content__username {
+  padding: 15px 0 15px 10px;
+  max-width: 439px;
+  max-height: 60px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__username {
+    height: 35px;
+    padding: 10px 0 10px 10px;
+    max-width: 300px;
+    max-height: 35px;
+  }
+}
+.rogin-content__username-save {
+  display: flex;
+  position: relative;
+  margin: 0 0 30px 30px;
+  padding-left: 5px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__username-save {
+    margin: 0 0 10px 0;
+    padding-left: 0;
+  }
+}
+.rogin-content__username-save__text {
+  position: absolute;
+  font-size: 20px;
+  color: #5A5A5A;
+  left: 35px;
+  top: -3px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__username-save__text {
+    font-size: 10px;
+    padding-left: 20px;
+    top: 3px;
+  }
+}
+.rogin-content__password {
+  padding: 15px 0 15px 10px;
+  max-width: 439px;
+  max-height: 60px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__password {
+    height: 35px;
+    padding: 10px 0 10px 10px;
+    max-width: 300px;
+    max-height: 35px;
+  }
+}
+.rogin-content__password-save {
+  display: flex;
+  position: relative;
+  margin: 0 0 30px 30px;
+  padding-left: 5px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__password-save {
+    margin: 0;
+    padding-left: 0;
+  }
+}
+.rogin-content__password-save__text {
+  position: absolute;
+  font-size: 20px;
+  color: #5A5A5A;
+  left: 35px;
+  top: -3px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__password-save__text {
+    font-size: 10px;
+    padding-left: 20px;
+    top: 3px;
+  }
+}
+.rogin-content__page-button {
+  background-color: #5a5a5a;
+  height: 74px;
+  width: 222px;
+  border-radius: 25px;
+  font-size: 24px;
+  display: block;
+  margin: 50px auto 0 auto;
+  border: 1px solid #ffffff;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__page-button {
+    height: 50px;
+    width: 140px;
+    font-size: 16px;
+    margin: 35px auto 0 auto;
+  }
+}
+.rogin-content__page-button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.rogin-content__password-forget {
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding-left: 25px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__password-forget {
+    padding-left: 0;
+    margin: 10px 0 40px 0;
+  }
+}
+.rogin-content__password-forget a {
+  text-decoration: none;
+}
+.rogin-content__password-forget p {
+  font-size: 20px;
+  color: #5A5A5A;
+  transition: color 300ms;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .rogin-content__password-forget p {
+    font-size: 10px;
+  }
+}
+.rogin-content__password-forget p:hover {
+  color: #000000;
+}
+
+/* パスワード再設定 */
+.password-content {
+  padding: 56px 0 160px 0;
+  min-width: 547px;
+  max-width: 547px;
+  position: relative;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .password-content {
+    padding: 30px 0 40px 0;
+    max-width: 300px;
+    min-width: 300px;
+  }
+}
+.password-content__explane {
+  background-color: #ffffff;
+  width: 547px;
+  height: 108px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.password-content__explane p {
+  padding: 10px 0 0 10px;
+  text-align: left;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .password-content__explane {
+    width: 277px;
+    height: 65px;
+    font-size: 10px;
+    margin: 0 auto;
+  }
+}
+.password-content__email {
+  margin-top: 30px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .password-content__email {
+    margin-top: 20px;
+  }
+}
+.password-content__email__email {
+  background-color: #ffffff;
+  border: 1px solid #707070;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 20px;
+  padding: 15px 0 15px 10px;
+  max-width: 493px;
+  max-height: 60px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .password-content__email__email {
+    font-size: 10px;
+    height: 35px;
+    padding: 10px 0 10px 10px;
+    max-width: 300px;
+    max-height: 35px;
+  }
+}
+.password-content__email__worning {
+  margin: 5px 0 40px 0;
+  text-align: left;
+  padding-left: 37px;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .password-content__email__worning {
+    padding-left: 10px;
+    margin: 5px 0 40px 0;
+  }
+}
+.password-content__email__worning a {
+  text-decoration: none;
+}
+.password-content__email__worning p {
+  font-size: 16px;
+  color: #5A5A5A;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .password-content__email__worning p {
+    font-size: 10px;
+  }
+}
+.password-content__page-button {
+  background-color: #5a5a5a;
+  color: #ffffff;
+  height: 74px;
+  width: 222px;
+  border-radius: 25px;
+  font-size: 24px;
+  display: block;
+  margin: 50px auto 0 auto;
+  border: 1px solid #ffffff;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .password-content__page-button {
+    height: 50px;
+    width: 140px;
+    font-size: 16px;
+    margin: 40px auto 0 auto;
+  }
+}
+
+/* 記事一覧 */
+.list-content {
+  padding: 56px 0 160px 0;
+  max-width: 1260px;
+  position: relative;
+}
+.list-content a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 300ms;
+}
+.list-content a:hover {
+  color: #5a5a5a;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content {
+    padding: 20px 0 40px 0;
+    max-width: 580px;
+  }
+}
+.list-content__list {
+  text-align: left;
+  /* ヘッダ */
+  /* 中身 */
+}
+.list-content__list table {
+  border-collapse: collapse; /*セル同士の間に隙間を空けない*/
+  margin: 0 auto;
+}
+.list-content__list th {
+  font-size: 25px;
+  text-align: left;
+  font-weight: lighter;
+  color: #ffffff;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content__list th {
+    font-size: 13px;
+  }
+}
+.list-content__list th:nth-child(2) {
+  width: 180px;
+  padding-left: 10px;
+}
+.list-content__list th:nth-child(3) {
+  width: 180px;
+}
+.list-content__list th:nth-child(4) {
+  width: 130px;
+}
+.list-content__list th:nth-child(5) {
+  width: 156px;
+}
+.list-content__list th:nth-child(6) {
+  width: 556px;
+}
+.list-content__list td {
+  vertical-align: top;
+  font-size: 20px;
+  padding: 10px 10px 10px 0;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content__list td {
+    font-size: 10px;
+  }
+}
+.list-content__list td p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content__list td p {
+    -webkit-line-clamp: 6;
+  }
+}
+.list-content__list td:nth-child(1) {
+  height: 150px;
+  padding-right: 20px;
+  background-color: #BAC9BC;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content__list td:nth-child(1) {
+    padding-right: 15px;
+    height: 100px;
+  }
+}
+.list-content__list td:nth-child(2) {
+  padding-left: 10px;
+}
+.list-content__list__list-button {
+  margin: 20px auto 0 auto;
+  text-align: right;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content__list__list-button {
+    margin: 20px auto 0 auto;
+  }
+}
+.list-content__list__list-button a {
+  text-decoration: none;
+}
+.list-content__list__list-button__write-button, .list-content__list__list-button__delete-button {
+  color: #ffffff;
+  background-color: #5A5A5A;
+  height: 55px;
+  width: 180px;
+  border-radius: 25px;
+  border: 1px solid #ffffff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.list-content__list__list-button__write-button img, .list-content__list__list-button__delete-button img {
+  height: 30px;
+  margin: auto 0;
+  vertical-align: middle;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content__list__list-button__write-button img, .list-content__list__list-button__delete-button img {
+    height: 15px;
+  }
+}
+.list-content__list__list-button__write-button p, .list-content__list__list-button__delete-button p {
+  margin: auto 0;
+  display: inline-block;
+}
+@media screen and (min-width: 0px) and (max-width: 1280px) {
+  .list-content__list__list-button__write-button, .list-content__list__list-button__delete-button {
+    height: 40px;
+    width: 110px;
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+  }
+}
+
+/* 削除時 */
+.none {
+  display: none;
+}
+
 /* 記事投稿 */
 .edit-content {
   padding-top: 56px;
@@ -660,6 +1092,9 @@ body {
     height: 200px;
     padding: 10px 0 10px 10px;
   }
+}
+.edit-content__topic textarea {
+  width: 98%;
 }
 .edit-content__image {
   display: flex;
@@ -753,12 +1188,14 @@ body {
     height: 50px;
     width: 140px;
     font-size: 16px;
+    margin: 0 5px;
   }
 }
 
 .background {
   width: 100%;
   background-color: #BAC9BC;
+  text-align: center;
 }
 
 .show {

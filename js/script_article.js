@@ -41,3 +41,10 @@ banner[0].addEventListener("click", function() {
     // 非表示用クラスを付与
     banner[0].classList.add("delete")
 });
+
+function pushGood() {
+    const goodNum = document.getElementById("goodNum");
+    goodNum.textContent = Number(goodNum.textContent) + 1;
+    const good = document.getElementById("good");
+    good.src = "img/icon_good_pink.png";
+}
