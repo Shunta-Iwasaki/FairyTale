@@ -246,6 +246,9 @@ tbody {
             &__content {
                 display: flex;
                 height: auto;
+                @include sp {
+                    display: block;
+                }
                 &__img {
                     @include sp {
                         width: 52%;
@@ -264,9 +267,9 @@ tbody {
                     height: auto;
                     font-size: 20px;
                     @include sp {
-                        font-size: 10px;
-                        margin-left: 15px;
-                        width: 50%;
+                        font-size: 16px;
+                        margin-left: 0;
+                        width: 100%;
                     }
                     &__topic {
                         text-decoration: none;
@@ -276,6 +279,7 @@ tbody {
                             color: #000000;
                         }
                         @include sp {
+                            margin-top: 10px;
                         }
                         p {
                             display: -webkit-box;
@@ -292,15 +296,16 @@ tbody {
                         font-size: 25px;
                         color: #5A5A5A;
                         @include sp {
-                            font-size: 12px;
+                            font-size: 16px;
+                            margin-top: 10px;
                         }
                         &__good {
                             display: flex;
                             margin-left: 10px;
                             img {
                                 @include sp {
-                                    width: 14px;
-                                    height: 14px;
+                                    width: 22px;
+                                    height: 22px;
                                 }
                             }
                             p {
@@ -355,7 +360,7 @@ tbody {
                     height: auto;
                     font-size: 20px;
                     @include sp {
-                        font-size: 12px;
+                        font-size: 16px;
                         margin-left: 0;
                         width: 100%;
                     }
@@ -384,7 +389,7 @@ tbody {
                         font-size: 25px;
                         color: #5A5A5A;
                         @include sp {
-                            font-size: 12px;
+                            font-size: 16px;
                             margin-top: 10px;
                         }
                         &__good {
@@ -392,8 +397,8 @@ tbody {
                             margin-left: 10px;
                             img {
                                 @include sp {
-                                    width: 14px;
-                                    height: 14px;
+                                    width: 22px;
+                                    height: 22px;
                                 }
                             }
                             p {
