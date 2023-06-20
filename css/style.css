@@ -23,7 +23,7 @@ body {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .gray-text {
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 5px;
   }
 }
@@ -83,7 +83,7 @@ tbody:nth-child(odd) {
     margin-left: 2vw;
   }
   .page-header__profile__sns {
-    font-size: 8px;
+    font-size: 10px;
     text-align: left;
     margin-left: 2vw;
   }
@@ -134,7 +134,7 @@ tbody:nth-child(odd) {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .page-header__nav__list p {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 .page-header__edit, .page-header__login, .page-header__password, .page-header__list {
@@ -282,7 +282,7 @@ tbody:nth-child(odd) {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__home-topic__title {
-    font-size: 16px;
+    font-size: 18px;
   }
   .main-content__article__home-topic__title p {
     margin-bottom: 5px;
@@ -384,7 +384,7 @@ tbody:nth-child(odd) {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__list-topic__title {
-    font-size: 16px;
+    font-size: 18px;
   }
   .main-content__article__list-topic__title p {
     margin-bottom: 5px;
@@ -504,7 +504,7 @@ tbody:nth-child(odd) {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__single-topic__title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .main-content__article__single-topic__content__img {
@@ -521,7 +521,7 @@ tbody:nth-child(odd) {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__single-topic__content__text {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 .main-content__article__single-topic__content__text p {
@@ -540,7 +540,7 @@ tbody:nth-child(odd) {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__single-topic__content__text__status {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 .main-content__article__single-topic__content__text__status__good {
@@ -549,8 +549,8 @@ tbody:nth-child(odd) {
 }
 @media screen and (min-width: 0px) and (max-width: 1280px) {
   .main-content__article__single-topic__content__text__status__good img {
-    width: 14px;
-    height: 14px;
+    width: 22px;
+    height: 22px;
   }
 }
 .main-content__article__single-topic__content__text__status__good p {
