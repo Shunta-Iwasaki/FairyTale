@@ -117,7 +117,7 @@ tbody {
             }
         }
     }
-    &__edit, &__rogin, &__password, &__list {
+    &__edit, &__login, &__password, &__list {
         display: flex;
         justify-content: center;
         margin: 30px 0;
@@ -160,7 +160,7 @@ tbody {
         margin: 40px 0;
         border-top: 2px solid #6A5849;
     }
-    &__edit, &__rogin, &__password, &__list {
+    &__edit, &__login, &__password, &__list {
         margin: 30px auto 50px auto;
         border-top: 2px solid #6A5849;
         @include sp {
@@ -571,7 +571,7 @@ tbody {
 }
 
 /* ログイン */
-.rogin-content {
+.login-content {
     padding: 56px 0 150px 0;
     min-width: 493px;
     max-width: 493px;
